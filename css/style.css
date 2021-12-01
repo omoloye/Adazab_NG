@@ -1,0 +1,572 @@
+/*
+===================
+RESET
+===================
+*/
+:root{
+    --primaryColor: #f1f1f1;
+    --black: #222;
+    --black2: #555;
+    --black3: #252525;
+    --black4: #000;
+    --black5: #212529;
+    --orange: #eb0028;
+    --white: #fff;
+    --grey: #959595;
+    --grey2: #666;
+    --grey3: #ccc;
+    --secondaryColor: #2b1f4d;
+    --yellow: #ffcc00;
+    --green: #59b210;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+#home{
+    overflow: hidden;
+    background-color: #000;
+}
+
+header {
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+}
+
+.navbar {
+    min-height: 65px;
+    background: black;
+}
+
+.home_nav {
+    background: transparent;
+}
+
+.navbar.scrolled {
+    opacity: .9;
+    background:  rgba(55, 0, 255, 0.782);
+}
+
+.navbar-brand {
+    padding: 0 15px;
+    height: 65px;
+    line-height: 65px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler .line {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(0, 255, 200);
+    display: block;
+    margin: 5px;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav>li>a {
+        padding-top: 21.775px;
+        padding-bottom: 21.775px;
+        line-height: 21.9px;
+    }
+}
+
+.nav-link {
+    text-transform: capitalize;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link {
+    color: white;
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover {
+    font-size: 14px;
+    transition: ease .2s;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link.scrolled {
+    color: #1060a9;
+}
+
+.navbar-light .navbar-nav .nav-item.active .nav-link {
+    font-size: 15px;
+}
+
+.nav-item.active::before{
+    color: orangered;
+}
+
+/* Carousel section */
+
+#myCarousel {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    z-index: 1;
+}
+
+.carousel-indicators li {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    background: none;
+}
+
+#myCarousel .carousel-inner .carousel-item {
+    position: relative;
+    height: 100vh;
+}
+
+#carousel-img,
+#carousel-video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+    
+}
+
+.carousel-img-content {
+    color: white;
+    height: 100%;
+    display: flex;
+    justify-self: flex-start;
+    align-items: center;
+    background:rgba(0,0,0,0.6);;
+}
+
+.carousel-img-content a {
+    color:white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.carousel-img-content p{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.fa-long-arrow-right {
+    animation: up 2s infinite;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(4rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* End of Carousel section */
+
+.contactForm {
+    position: relative;
+    background-color: #fff;
+    width: calc(100% - 150px);
+}
+
+.contactForm .formBox {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.contactForm .formBox .inputBox {
+    position: relative;
+    margin: 0 0 35px 0;
+}
+
+.contactForm .formBox .inputBox.w50 {
+    width: 47%;
+}
+.contactForm .formBox .inputBox.w100 {
+    width: 100%;
+}
+
+.contactForm .formBox .inputBox input,
+.contactForm .formBox .inputBox textarea {
+    width: 100% !important;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    resize: none;
+    border-bottom: 1px solid #777;
+    outline: none;
+}
+
+.contactForm .formBox .inputBox textarea {
+    min-height: 120px;
+}
+
+.contactForm .formBox .inputBox span {
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.contactForm .formBox .inputBox input:focus~span,
+.contactForm .formBox .inputBox textarea:focus~span,
+.contactForm .formBox .inputBox input:valid~span,
+.contactForm .formBox .inputBox textarea:valid~span {
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ff0000;
+}
+
+.contactForm .formBox .inputBox input[type="submit"] {
+    position: relative;
+    cursor: pointer;
+    background: #0f3959;
+    color: #fff;
+    border: none;
+    max-width: 150px;
+    padding: 12px;
+}
+
+.contactForm .formBox .inputBox input[type="submit"]:hover {
+    background-color: #ff0000;
+}
+@media (max-width:510px){
+    .contactForm {
+        position: relative;
+        width: calc(100% - 100px);
+        margin-left: 20px;
+    }
+    .contactForm .formBox .inputBox span {
+        position: absolute;
+        left: 0;
+        font-size: 10px;
+        font-weight: 200;
+        color: #333;
+        transition: 0.5s;
+        pointer-events: none;
+    }
+    
+    
+}
+@media (max-width:380px){
+    .contactForm {
+        position: relative;
+        width: calc(100% - 100px);
+        margin-left: 30px;
+    }
+    .contactForm .formBox .inputBox span {
+        position: absolute;
+        left: 0;
+        font-size: 10px;
+        font-weight: 200;
+        color: #333;
+        transition: 0.5s;
+        pointer-events: none;
+    }
+    
+    
+}
+#row4{
+    height: 100vh;
+    background: url('../images/pill-0.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row5{
+    height: 100vh;
+    background: url('../images/maga2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row6{
+    height: 100vh;
+    background: url('../images/consu1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row7{
+    height: 100vh;
+    background: url('../images/super.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row8{
+    height: 100vh;
+    background: url('../images/medcomp.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row9{
+    height: 100vh;
+    background: url('../images/medlab.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row10{
+    height: 100vh;
+    background: url('../images/resturant1\ \(1\).jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row11{
+    height: 100vh;
+    background: url('../images/radio.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row12{
+    height: 100vh;
+    background: url('../images/medlab2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row13{
+    height: 100vh;
+    background: url('../images/neuroloy.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row14{
+    height: 100vh;
+    background: url('../images/nephrologyhero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row15{
+    height: 100vh;
+    background: url('../images/hemato.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row16{
+    height: 100vh;
+    background: url('../images/hepato.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#tas{
+    color: red;
+}
+#ca {
+color: black;
+}
+#as {
+    color: black;
+}
+.banner{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+}
+.heading{
+    text-align: center;
+    color:black;
+}
+.heading p{
+    font-size: 20px;
+    color: blue;
+}
+.row p{
+    color: black;
+    line-height: 25px;
+}
+.row h2,h3{
+    color:black;
+}
+.row h2{
+    font-size: 18px;
+}
+/*.footer-top{
+    position: relative !important;
+    background:rgba(77, 0, 7, 0.657);
+    padding: 80px 0;
+}*/
+.footer-bottom-text{
+    text-align: center;
+    background: #000;
+    color: white;
+    line-height: 75px;
+}
+#row{
+    height: 100vh;
+    background: url('../images/laboratory.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row1{
+    height: 100vh;
+    background: url('../images/laboratory.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#row2{
+    height: 100vh;
+    background: url('../images/laboratory.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#frenz{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/wine3.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#row3{
+    height: 100vh;
+    background-image: url('images/wines\ backgr.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+footer {
+    width: 100%;
+    min-height: 80vh;
+}
+
+.footer-section {
+    color: #fff;
+    background: linear-gradient( rgba(16, 96, 169, 1.0), rgba(16, 96, 169, .9)), url(../images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 100px;
+    justify-content: center;
+    min-height: 40vh;
+}
+
+.footer-section h1 {
+    font-size: 13px;
+}
+
+.footer-section p {
+    font-size: 15px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section .fa {
+    color: #fff;
+    font-size: 15px;
+    border: 1px solid #fff;
+    padding: 8px;
+    border-radius: 100%;
+}
+
+.footer-section input[type=text] {
+    width: 40%;
+    min-height: 5vh;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    font-size: 11px;
+    text-align: center;
+}
+
+.footer-section button[type=button] {
+    width: 100%;
+    min-height: 5vh;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+    color: #fff;
+    background-color: #ff0000;
+    font-size: 11px;
+    text-align: center;
+    padding: 8px;
+}
+
+footer hr {
+    color: #fff;
+}
+
+.footer-bottom {
+    color: #fff;
+    height: 20vh;
+    background-color: rgb(26, 25, 25);
+}
+
+.footer-bottom p {
+    text-align: center;
+    font-size: 15px;
+    margin: auto;
+    margin-top: 60px;
+}
+.icon-background1 {
+    color: red;
+}
+
+.icon-background2 {
+    color: #1060a9;
+}
+
+.icon-background3 {
+    color: #1f1a86;
+}
+
